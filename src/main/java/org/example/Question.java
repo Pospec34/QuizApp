@@ -17,6 +17,11 @@ public class Question {
         this.wrongAnswers = wrongAnswers;
     }
 
+    /**
+     *
+     *
+     * @return
+     */
     public List<String> getAnswerOptions(){
         List<String> options = new ArrayList<>();
         options.add(correctAnswer);

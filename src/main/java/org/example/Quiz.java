@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.models.LoadQuestions;
+import org.example.models.QuestionLoader;
+import org.example.models.ScoreEvaluator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,25 +10,27 @@ import java.util.Scanner;
 
 public class Quiz {
     Scanner scanner = new Scanner(System.in);
-    private Database database;
+    private Database database = new Database();
     private List<Question> questions = new ArrayList<>();
     private int score = 0;
-    LoadQuestions loadQuestions = new LoadQuestions();
+    private int numberOfQuestions = 0;
+    QuestionLoader questionLoader;
+    ScoreEvaluator scoreEvaluator = new ScoreEvaluator();
 
 
-    public Quiz (Database database){
-        this.database = database;
+    public Quiz (){
+        this.questionLoader = new QuestionLoader();
     }
 
     public void startQuiz(int categoryId){
-        questions = loadQuestions.getQuestionsFromDatabase(categoryId, database);
-        Collections.shuffle(questions);
+        questions = questionLoader.getQuestionsFromDatabase(categoryId, database);
+        Collections.shuffle(questions);         //Mixes up the questions so they are not always in the same order
 
         for (Question question : questions){
             System.out.println("Otázka: " + question.getText());
             List<String> answerOptions = question.getAnswerOptions();
 
-            int correctAnswerIndex = answerOptions.indexOf(question.getCorrectAnswer()) + 1;
+            int correctAnswerIndex = answerOptions.indexOf(question.getCorrectAnswer()) + 1;    // Finds index of the correct answer so it can be compared with users answer
 
             for (int i = 0; i < answerOptions.size(); i++){
                 System.out.println((i + 1) + ". " + answerOptions.get(i));
@@ -35,6 +38,7 @@ public class Quiz {
 
             System.out.printf("Vaše odpověď (1-" + answerOptions.size() + "): ");
             int userChoice = scanner.nextInt();
+            numberOfQuestions++;
 
             if (userChoice == correctAnswerIndex){
                 System.out.println("Správně!");
@@ -43,5 +47,7 @@ public class Quiz {
                 System.out.println("Špatně. Správná odpověď byla: " + question.getCorrectAnswer());
             }
         }
+
+        scoreEvaluator.evaluateScore(score, numberOfQuestions);
     }
 }
