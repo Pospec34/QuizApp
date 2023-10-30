@@ -25,7 +25,7 @@ public class QuizSubCategories {
             preparedStatement.setInt(1, sub_category_id);
             ResultSet resultSet = preparedStatement.executeQuery();
           while(resultSet.next()){
-              String category = resultSet.getString("sub_category_name");
+              String category = resultSet.getString( "sub_category_name");
               subCategoriesList.add(category);
           }
         } catch (SQLException e){

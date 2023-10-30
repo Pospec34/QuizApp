@@ -10,6 +10,7 @@ public class SubCategoriesInterface {
     Scanner scanner = new Scanner(System.in);
     Database database;
     QuizSubCategories quizSubCategories;
+    int index = 1;
 
 
     public SubCategoriesInterface(Database database){
@@ -36,7 +37,7 @@ public class SubCategoriesInterface {
             selection = Integer.parseInt(scanner.nextLine());
 
             if (selection != 0) {
-                Quiz quiz = new Quiz();
+                Quiz quiz = new Quiz(database);
                 quiz.startQuiz(selection);
 
             }

@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Quiz {
     Scanner scanner = new Scanner(System.in);
-    private Database database = new Database();
+    Database database;
     private List<Question> questions = new ArrayList<>();
     private int score = 0;
     private int numberOfQuestions = 0;
@@ -18,8 +18,9 @@ public class Quiz {
     ScoreEvaluator scoreEvaluator = new ScoreEvaluator();
 
 
-    public Quiz (){
+    public Quiz (Database database){
         this.questionLoader = new QuestionLoader();
+        this.database = database;
     }
 
     public void startQuiz(int categoryId){
