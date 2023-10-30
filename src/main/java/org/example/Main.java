@@ -1,10 +1,15 @@
 package org.example;
 
+import org.example.views.SubCategoriesInterface;
+
 public class Main {
     public static void main(String[] args) {
-        Quiz quiz = new Quiz();
+        Database database = new Database();
 
-        quiz.startQuiz(3);
+        SubCategoriesInterface subCategoriesInterface = new SubCategoriesInterface(database);
+
+        subCategoriesInterface.getSubCategories(1);
+
 
     }
 }
