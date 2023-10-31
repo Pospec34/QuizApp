@@ -17,7 +17,6 @@ public class Quiz {
     QuestionLoader questionLoader;
     ScoreEvaluator scoreEvaluator = new ScoreEvaluator();
 
-
     public Quiz (Database database){
         this.questionLoader = new QuestionLoader();
         this.database = database;
