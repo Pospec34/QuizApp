@@ -12,6 +12,7 @@ import java.util.List;
 public class QuizSubCategories {
 
     Database database;
+    int subCategoryIndex = 0;       // Used for numbering the selection of subcategories
     public QuizSubCategories(Database database){
         this.database = database;
     }
@@ -25,13 +26,15 @@ public class QuizSubCategories {
             preparedStatement.setInt(1, sub_category_id);
             ResultSet resultSet = preparedStatement.executeQuery();
           while(resultSet.next()){
+              subCategoryIndex++;
               String category = resultSet.getString( "sub_category_name");
-              subCategoriesList.add(category);
+              subCategoriesList.add(subCategoryIndex + " - " + category);
           }
         } catch (SQLException e){
             e.printStackTrace();
             System.out.println("Chyba při výpisu kategorií");
         }
+        subCategoryIndex = 0;
         return subCategoriesList.toArray(new String[0]);
 
     }

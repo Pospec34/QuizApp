@@ -3,6 +3,7 @@ package org.example.views;
 import org.example.Database;
 import org.example.Quiz;
 import org.example.models.QuizSubCategories;
+import org.example.models.SubCategoryIdFinder;
 
 import java.util.Scanner;
 
@@ -10,12 +11,13 @@ public class SubCategoriesInterface {
     Scanner scanner = new Scanner(System.in);
     Database database;
     QuizSubCategories quizSubCategories;
-    int index = 1;
-
+    SubCategoryIdFinder subCategoryIdFinder;
 
     public SubCategoriesInterface(Database database){
         this.database = database;
         this.quizSubCategories= new QuizSubCategories(database);
+        this.subCategoryIdFinder = new SubCategoryIdFinder(database);
+
     }
 
     public void getSubCategories(int categoryId){
@@ -25,7 +27,6 @@ public class SubCategoriesInterface {
             System.out.println("––––––––––––––––––––––––––––");
             System.out.println("         PODTÉMATA          ");
             System.out.println("––––––––––––––––––––––––––––");
-
             String[] subCategories = quizSubCategories.getQuizSubCategories(categoryId);
 
             for (String subCategory : subCategories){
@@ -37,11 +38,12 @@ public class SubCategoriesInterface {
             selection = Integer.parseInt(scanner.nextLine());
 
             if (selection != 0) {
+                int subCategoryId = subCategoryIdFinder.getSubGategoryId(subCategories[selection - 1]);
+
                 Quiz quiz = new Quiz(database);
-                quiz.startQuiz(selection);
+                quiz.startQuiz(subCategoryId);
 
             }
         }
-
     }
 }
