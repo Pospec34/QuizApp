@@ -1,12 +1,14 @@
 package org.example.menu;
 
 import org.example.database.Database;
+import org.example.validators.InputValidator;
 
 import java.util.Scanner;
 
 public class MainMenu {
     private Database database;
     private CategoriesMenu categoriesMenu;
+    private InputValidator inputValidator = new InputValidator();
     Scanner scanner = new Scanner(System.in);
 
     public MainMenu(Database database){
@@ -15,9 +17,9 @@ public class MainMenu {
     }
 
     public void execute(){
-        int selection = 99;
+        int userInput = -1;
 
-        while (selection != 0){
+        while (userInput != 0) {
             System.out.println("––––––––––––––––––––––––––––");
             System.out.println("       HLAVNÍ NABÍDKA       ");
             System.out.println("––––––––––––––––––––––––––––");
@@ -27,13 +29,20 @@ public class MainMenu {
             System.out.println();
             System.out.println("0 - Konec");
 
-            selection = Integer.parseInt(scanner.nextLine());
-            switch(selection){
-                case 1:
-                    categoriesMenu.getCategories();
-                    break;
+
+            String userInputStr = scanner.nextLine();
+
+            if (inputValidator.isInputValid(userInputStr)) {
+                userInput = Integer.parseInt(userInputStr);
+                switch (userInput) {
+                    case 1:
+                        categoriesMenu.getCategories();
+                        break;
+                }
+            } else {
+                System.out.println("Zadejte pouze platnou číselnou hodnotu.");
             }
-            System.out.println("Na shledanou!");
         }
+        System.out.println("Na shledanou!");
     }
 }

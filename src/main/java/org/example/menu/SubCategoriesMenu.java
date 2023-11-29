@@ -4,12 +4,14 @@ import org.example.database.Database;
 import org.example.Quiz;
 import org.example.selectData.QuizSubCategories;
 import org.example.selectData.SubCategoryIdFinder;
+import org.example.validators.InputValidator;
 
 import java.util.Scanner;
 
 public class SubCategoriesMenu {
     Scanner scanner = new Scanner(System.in);
     Database database;
+    InputValidator inputValidator = new InputValidator();
     QuizSubCategories quizSubCategories;
     SubCategoryIdFinder subCategoryIdFinder;
 
@@ -21,9 +23,9 @@ public class SubCategoriesMenu {
     }
 
     public void getSubCategories(int categoryId){
-        int selection = 99;
+        int userInput = 99;
 
-        while (selection != 0){
+        while (userInput != 0){
             System.out.println("––––––––––––––––––––––––––––");
             System.out.println("         PODTÉMATA          ");
             System.out.println("––––––––––––––––––––––––––––");
@@ -35,14 +37,21 @@ public class SubCategoriesMenu {
             System.out.println();
             System.out.println("0 - Zpět k tématům");
 
-            selection = Integer.parseInt(scanner.nextLine());
+            String userInputStr = scanner.nextLine();
 
-            if (selection != 0) {
-                int subCategoryId = subCategoryIdFinder.getSubGategoryId(subCategories[selection - 1]);
+            if (inputValidator.isInputValid(userInputStr)){
+                userInput = Integer.parseInt(userInputStr);
 
-                Quiz quiz = new Quiz(database);
-                quiz.startQuiz(subCategoryId);
+                if (userInput != 0) {
+                    int subCategoryId = subCategoryIdFinder.getSubGategoryId(subCategories[userInput - 1]);
 
+                    Quiz quiz = new Quiz(database);
+                    quiz.startQuiz(subCategoryId);
+            } else {
+                    break;
+                }
+            } else {
+                System.out.println("Zadejte pouze platnou číselnou hodnotu.");
             }
         }
     }

@@ -6,16 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="61e0c8aa-d8cf-41e4-8212-a518ee121fb7" name="Changes" comment="Added SubCategoryIdFinder class which solves problem with starting wrong quiz category. Fixed a bug with categories and subcategories numbering">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_1_0__3_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/databaseInteraction/InputValidator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/CategoriesMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/databaseInteraction/Database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/validators/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/database/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/QuestionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/databaseInteraction/QuestionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/QuizCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/databaseInteraction/QuizCategories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/QuizSubCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/databaseInteraction/QuizSubCategories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/QuestionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/selectData/QuestionLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/QuizCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/selectData/QuizCategories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/QuizSubCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/selectData/QuizSubCategories.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/ScoreEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/score/ScoreEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/SubCategoryIdFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/databaseInteraction/SubCategoryIdFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/SubCategoryIdFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/selectData/SubCategoryIdFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/CategoriesInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/SubCategoriesInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/SubCategoriesMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/menu/MainMenu.java" afterDir="false" />
@@ -34,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -90,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698309725729</updated>
       <workItem from="1701283103515" duration="113000" />
-      <workItem from="1701283236809" duration="3564000" />
+      <workItem from="1701283236809" duration="9106000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, quiz now works">
       <option name="closed" value="true" />

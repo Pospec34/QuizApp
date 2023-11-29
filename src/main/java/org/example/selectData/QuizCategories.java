@@ -16,6 +16,10 @@ public class QuizCategories {
         this.database = database;
     }
 
+    /**
+     *  Gets a list of categories from database and adds an index to each category name
+     * @return returns an array of indexed categories
+     */
     public String[] getQuizCategories(){
         String sql = "SELECT category_name FROM categories";
         List<String> categoriesList = new ArrayList<>();

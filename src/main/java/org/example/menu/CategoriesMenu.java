@@ -27,7 +27,7 @@ public class CategoriesMenu {
             System.out.println("––––––––––––––––––––––––––––");
             System.out.println("           TÉMATA           ");
             System.out.println("––––––––––––––––––––––––––––");
-            String[] categories = quizCategories.getQuizCategories();
+            String[] categories = quizCategories.getQuizCategories(); // loads categories from database and adds them into an array
 
             for (String category : categories){
                 System.out.println(category);
@@ -38,19 +38,20 @@ public class CategoriesMenu {
 
             String userInputStr = scanner.nextLine();
 
-            /**
-             * Needs to be looked into more
-             */
-            if (validator.isInputValid(userInputStr)){    // Checks if users input is a number
+
+            if (validator.isInputValid(userInputStr)) {
                 userInput = Integer.parseInt(userInputStr);
+
                 if (userInput != 0){
                     subCategoriesInterface.getSubCategories(userInput);
+                } else {
+                    break;
                 }
-            } else if (userInput == 0) {
-                break;
             } else {
                 System.out.println("Zadejte pouze platnou číselnou hodnotu.");
             }
+
+
         }
     }
 }
