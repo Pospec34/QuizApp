@@ -1,6 +1,6 @@
-package org.example.models;
+package org.example.selectData;
 
-import org.example.Database;
+import org.example.database.Database;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

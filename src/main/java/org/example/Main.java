@@ -1,15 +1,14 @@
 package org.example;
 
-import org.example.views.CategoriesInterface;
-import org.example.views.UserInterface;
+import org.example.database.Database;
+import org.example.menu.MainMenu;
 
 public class Main {
     public static void main(String[] args) {
         Database database = new Database();
+        MainMenu menu = new MainMenu(database);
 
-        UserInterface userInterface = new UserInterface(database);
-
-        userInterface.execute();
+        menu.execute();
 
 
     }

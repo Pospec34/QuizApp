@@ -1,7 +1,8 @@
 package org.example;
 
-import org.example.models.QuestionLoader;
-import org.example.models.ScoreEvaluator;
+import org.example.database.Database;
+import org.example.selectData.QuestionLoader;
+import org.example.score.ScoreEvaluator;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,19 +1,19 @@
-package org.example.views;
+package org.example.menu;
 
-import org.example.Database;
+import org.example.database.Database;
 import org.example.Quiz;
-import org.example.models.QuizSubCategories;
-import org.example.models.SubCategoryIdFinder;
+import org.example.selectData.QuizSubCategories;
+import org.example.selectData.SubCategoryIdFinder;
 
 import java.util.Scanner;
 
-public class SubCategoriesInterface {
+public class SubCategoriesMenu {
     Scanner scanner = new Scanner(System.in);
     Database database;
     QuizSubCategories quizSubCategories;
     SubCategoryIdFinder subCategoryIdFinder;
 
-    public SubCategoriesInterface(Database database){
+    public SubCategoriesMenu(Database database){
         this.database = database;
         this.quizSubCategories= new QuizSubCategories(database);
         this.subCategoryIdFinder = new SubCategoryIdFinder(database);

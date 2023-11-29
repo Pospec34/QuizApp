@@ -1,17 +1,17 @@
-package org.example.views;
+package org.example.menu;
 
-import org.example.Database;
+import org.example.database.Database;
 
 import java.util.Scanner;
 
-public class UserInterface {
+public class MainMenu {
     private Database database;
-    private CategoriesInterface categoriesInterface;
+    private CategoriesMenu categoriesMenu;
     Scanner scanner = new Scanner(System.in);
 
-    public UserInterface(Database database){
+    public MainMenu(Database database){
         this.database = database;
-        this.categoriesInterface = new CategoriesInterface(database);
+        this.categoriesMenu = new CategoriesMenu(database);
     }
 
     public void execute(){
@@ -24,14 +24,16 @@ public class UserInterface {
 
             System.out.println("1 - Výběr témat");
             System.out.println("2 - Vlastní témata");
-            System.out.println("3 - Konec");
+            System.out.println();
+            System.out.println("0 - Konec");
 
             selection = Integer.parseInt(scanner.nextLine());
             switch(selection){
                 case 1:
-                    categoriesInterface.getCategories();
+                    categoriesMenu.getCategories();
                     break;
             }
+            System.out.println("Na shledanou!");
         }
     }
 }
