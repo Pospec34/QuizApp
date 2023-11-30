@@ -9,8 +9,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ */
 public class QuestionLoader {
 
+    /**
+     * Retrieves a list of Question objects from the database based on a given subcategory ID
+     * @param categoryId The ID of the subcategory for which questions should be retrieved
+     * @param database
+     * @return returns a list of Question objects loaded from the database
+     */
     public List<Question> getQuestionsFromDatabase(int categoryId, Database database){
         String sql = "SELECT * FROM questions WHERE sub_category_id = ?";
         List<Question> loadedQuestions = new ArrayList<>();

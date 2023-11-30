@@ -17,6 +17,10 @@ public class QuizSubCategories {
         this.database = database;
     }
 
+    /**
+     *  Retrieves a list of sub_categories from database and adds an index to each sub_category name
+     * @return returns an array of indexed sub_categories
+     */
     public String[] getQuizSubCategories(int sub_category_id){
         String sql = "SELECT sub_category_name FROM sub_categories WHERE category_id = ?";
         List<String> subCategoriesList = new ArrayList<>();

@@ -17,7 +17,7 @@ public class QuizCategories {
     }
 
     /**
-     *  Gets a list of categories from database and adds an index to each category name
+     *  Retrieves a list of categories from database and adds an index to each category name
      * @return returns an array of indexed categories
      */
     public String[] getQuizCategories(){

@@ -21,7 +21,7 @@ public class CategoriesMenu {
     }
 
     public void getCategories(){
-        int userInput = 99;
+        int userInput = -1;
 
         while (userInput != 0){
             System.out.println("––––––––––––––––––––––––––––");

@@ -9,7 +9,7 @@ public class Database {
     // připojení k databázi
     private static final String URL = "jdbc:mysql://localhost:3306/quiz";
     private static final String USER = "root";
-    private static final String PASSWORD ="LosPospecos3044";
+    private static final String PASSWORD ="";
     private static Connection connection;
 
 

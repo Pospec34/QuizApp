@@ -53,7 +53,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Louie/Desktop/Portfólio/CoreQuiz/QuizApp",
+    "last_opened_file_path": "C:/Users/Louie/Desktop/Portfólio/PigLatinSpring",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,6 +66,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Louie\Desktop\Portfólio\CoreQuiz\QuizApp\src\main\java\org\example\database" />
       <recent name="C:\Users\Louie\Desktop\Portfólio\CoreQuiz\src\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -96,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698309725729</updated>
       <workItem from="1701283103515" duration="113000" />
-      <workItem from="1701283236809" duration="13398000" />
+      <workItem from="1701283236809" duration="18254000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, quiz now works">
       <option name="closed" value="true" />
