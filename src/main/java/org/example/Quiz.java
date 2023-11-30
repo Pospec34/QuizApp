@@ -43,9 +43,11 @@ public class Quiz {
 
             if (userChoice == correctAnswerIndex){
                 System.out.println("Správně!");
+                System.out.println();
                 score++;
             } else {
                 System.out.println("Špatně. Správná odpověď byla: " + question.getCorrectAnswer());
+                System.out.println();
             }
         }
 

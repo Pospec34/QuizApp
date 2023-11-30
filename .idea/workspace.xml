@@ -68,6 +68,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Louie\Desktop\Portfólio\CoreQuiz\src\libs" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Louie\Desktop\Portfólio\CoreQuiz\QuizApp\src\main\java\org\example\database" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
@@ -93,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698309725729</updated>
       <workItem from="1701283103515" duration="113000" />
-      <workItem from="1701283236809" duration="10287000" />
+      <workItem from="1701283236809" duration="13398000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, quiz now works">
       <option name="closed" value="true" />

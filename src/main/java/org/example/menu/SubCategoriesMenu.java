@@ -23,7 +23,7 @@ public class SubCategoriesMenu {
     }
 
     public void getSubCategories(int categoryId){
-        int userInput = 99;
+        int userInput = -1;
 
         while (userInput != 0){
             System.out.println("––––––––––––––––––––––––––––");
